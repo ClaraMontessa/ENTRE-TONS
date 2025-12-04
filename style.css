@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "zuume-cut-regular";
-  src: url("./FONT/zuume-cut-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "zuume-cut-regular";
+    src: url("./FONT/zuume-cut-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-@font-face {
-  font-family: "zuume-cut-light";
-  src: url("./FONT/zuume-cut-light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
+/* @font-face {
+    font-family: "zuume-cut-light";
+    src: url("./FONT/zuume-cut-light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+} */
 
 
 * {
@@ -58,7 +58,7 @@ header img {
     color: var(--preto);
     text-decoration: none;
     /* text-transform: uppercase; */
-    font-family:"zuume-cut-regular";
+    font-family: "zuume-cut-regular";
 }
 
 .menu a:hover {
@@ -71,8 +71,6 @@ header img {
 #menuBotao {
     display: none;
 }
-
-
 
 
 
@@ -109,6 +107,8 @@ header img {
         cursor: pointer;
     }
 
+    /* Cor do menu de hamburguer */
+
     header svg {
         fill: var(--preto);
     }
@@ -135,4 +135,130 @@ header img {
     .menu a {
         color: var(--preto);
     }
+}
+
+.banner {
+    background-image: url("./IMG/Banner.jpg");
+    height: 75vh;
+    background-size: cover;
+    background-position: center -50px;
+    /* FOCO EXATO DO PROTÓTIPO */
+    background-repeat: no-repeat;
+}
+
+.icones {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 200px;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon svg {
+    color: var(--preto);
+    width: 60px;
+    transition: 0.5s;
+}
+
+
+.icon svg:hover {
+    transform: translateY(-15px);
+}
+
+.icon p {
+    font-family: "zuume-cut-regular";
+    line-height: 25px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#nossaHistoria {
+    font-family: "zuume-cut-regular";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+#nossaHistoria p {
+    display: flex;
+    font-size: 32px;
+    /* margin-top: 200px; */
+}
+
+#nossaHistoria h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+
+}
+
+.texto {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.descricao {
+    width: 48%;
+    max-width: 600px;
+
+    margin-bottom: 100px;
+}
+
+.img_h {
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
+    max-width: 900px;
+}
+
+.img01_h {
+    width: 48%;
+}
+
+.img01_h img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img02_h {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px 20px;
+}
+
+.img02_h img {
+    width: 100%;
+    border-radius: 20px;
+    /* box-shadow: 9 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.titulo {
+
+    justify-content: center;
+}
+
+.descricao p {
+    margin-left: 100px;
+}
+
+.img_h {
+    margin-right: 90px;
+}
+
+.descricao h2 {
+    text-decoration-line: var(--vermelho);
 }
