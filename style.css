@@ -1,7 +1,17 @@
 @font-face {
-    font-family: "zuume-cut-regular";
-    src: url(./FONT/zuume-cut-regular.ttf);
+  font-family: "zuume-cut-regular";
+  src: url("./FONT/zuume-cut-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "zuume-cut-light";
+  src: url("./FONT/zuume-cut-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 * {
     margin: 0;
@@ -10,11 +20,12 @@
 }
 
 :root {
-    --branco: #fff;
+    --vermelho: #DB222A;
+    --marsala: #A31621;
     --preto: #000;
-    --fundo-site: #f3f2f2;
-    --vermelho: #A31621;
-    --marsala: #661014;
+    --cinza: #798086;
+    --branco: #F5F5F5;
+
 }
 
 .espacoLateral {
@@ -23,17 +34,16 @@
     margin: 0 auto;
 }
 
-/* ------------------------MENU------------------------------ */
-
+/* -------- Menu ------- */
 header {
-    height: 155px;
+    height: 165px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header img {
-    width: 230px;
+    width: 195px;
 }
 
 .menu {
@@ -45,18 +55,17 @@ header img {
 
 .menu a {
     font-size: 25px;
-    color: #000;
+    color: var(--preto);
     text-decoration: none;
-    text-transform: uppercase;
-    font-family: "zuume-cut-regular", sans-serif;
+    /* text-transform: uppercase; */
+    font-family:"zuume-cut-regular";
 }
 
 .menu a:hover {
-    color: #A31621;
+    color: var(--marsala);
 }
 
-/* ------------------MENU HAMBURGUER-------------------------------- */
-
+/* -------- Menu Hamburguer ------- */
 #iconeBarras,
 #iconeX,
 #menuBotao {
@@ -67,16 +76,16 @@ header img {
 
 
 
-/*---------------------- RESPONSIVIDADE------------------------- */
 
+/* ---------- Reponsividade ---------------- */
 @media screen and (max-width: 768px) {
     #sombra {
-        background-color: #eb3030dd;
-        backdrop-filter: blur(10px);
+        background-color: var(--cinza);
+        backdrop-filter: blur(45px);
         z-index: 1;
         position: fixed;
         width: 100vw;
-        height: 100vw;
+        height: 100vh;
         right: -101vw;
         transition: .5s;
     }
@@ -88,19 +97,20 @@ header img {
 
     header {
         position: relative;
-
     }
 
     header button {
         width: 50px;
-        background-color: none;
+
+        background: none;
         border: none;
+
         display: unset;
         cursor: pointer;
     }
 
     header svg {
-        fill: #000;
+        fill: var(--preto);
     }
 
     #iconeBarras {
@@ -117,12 +127,12 @@ header img {
 
         position: fixed;
         top: 165px;
-        right: 0 ;
+        right: -210px;
         z-index: 1;
         transition: .5s;
     }
 
     .menu a {
-        color: #000000d8;
+        color: var(--preto);
     }
 }
