@@ -249,6 +249,8 @@ header img {
 .titulo {
 
     justify-content: center;
+    font-family: "zuume-cut-regular";
+    font-size: 37px;
 }
 
 .descricao p {
@@ -261,4 +263,25 @@ header img {
 
 .descricao h2 {
     text-decoration-line: var(--vermelho);
+}
+
+.titulo span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    /* espaço entre o texto e a linha */
+}
+
+.titulo span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 173px;
+    /* tamanho da linha */
+    height: 3px;
+    /* espessura */
+    background-color: var(--marsala);
+    /* cor da linha */
+    border-radius: 2px;
 }
