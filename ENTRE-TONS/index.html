@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ENTRE TONS</title>
+    <link rel="shortcut icon" href="./IMG/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div id="sombra"></div>
+        <header class="espacoLateral">
+            <img src="./IMG/Logo.svg" alt="Logo da ENTRE TONS">
+
+            <nav id="menu" class="menu">
+                <a href="#nossaHistoria">Sobre</a>
+                <a href="#nossosServicos">Nossos serviços</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#entreEmcontato">Entre em contato</a>
+
+            </nav>
+
+            <button id="menuBotao" onclick="abreFechaMenu()" <!-- menu de hamburguer -->
+                <svg id="iconeBarras" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path
+                        d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+                </svg>
+
+                <svg id="iconeX" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"><!--!Font Awesome Pro v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.-->
+                    <path
+                        d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z" />
+                </svg>
+
+
+
+            </button>
+
+
+        </header>
+
+        <section class="banner"></section>
+
+        <section class="icones">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path
+                        d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                </svg>
+                <p>AULAS COM</p>
+                <p>PROFISSIONAIS</p>
+            </div>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-music-note-beamed"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2" />
+                    <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z" />
+                    <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z" />
+                </svg>
+                <p>APRESENTAÇÕES</p>
+                <p>MUSICAIS</p>
+            </div>
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                    <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                </svg>
+                <p>LOJA DE</p>
+                <p>INSTRUMENTOS</p>
+            </div>
+        </section>
+
+        <section id="nossaHistoria" class="espacoLateral">
+
+
+
+            <div class="descricao">
+                <h2 class="titulo"><span>Nossa História</span></h2>
+
+                <p class="texto">A escola de música nasceu da união entre músicos e educadores que sentiram a falta de
+                    um ensino musical acessível, emocional e prático. Localizada no centro de São Caetano do Sul,
+                    oferece aulas, instrumentos e acessórios a preços justos. Seu objetivo é tornar a música parte do
+                    cotidiano e transformar vidas por meio da arte.</p>
+            </div>
+
+            <div class="img_h">
+                <div class="img01_h">
+                    <img src="./IMG/Nossa historia 01.jpg" alt="Teclado">
+                </div>
+                <div class="img02_h">
+                    <img src="./IMG/Nossa hisstoria 02.jpg" alt="Placa da ENTRE TONS">
+                    <img src="./IMG/Nossa historia 03.jpg" alt="Violão">
+                </div>
+            </div>
+        </section>
+
+        <section id="nossosServicos" class="nossosServicos">
+            <h2 class="titulo"><span>Nossos serviços</span></h2>
+            <div class="servicos">
+                <div class="card">
+                    <img src="./IMG/nossos servicos.jpg" alt="Violão">
+                    <p>LOJA DE INSTRUMENTOS</p>
+                </div>
+
+                <div class="card">
+                    <img src="./IMG/nossos servicos 02.jpg" alt="Aula">
+                    <p>AULAS COM PROFISSIONAIS</p>
+                </div>
+
+                <div class="card">
+                    <img src="./IMG/nossos servicos 03.jpg" alt="Apresentações">
+                    <p>APRESENTAÇÕES MUSICAIS</p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- <section id="eventos" class="carrossel">
+         -->
+        <section id="eventos" class="carrossel-eventos">
+            <h2 class="titulo"> <span>EVENTOS</span></h2>
+
+            <div class="carousel-container">
+                <div class="carousel-track">
+
+                    <!-- CARD 1 -->
+                    <div class="card-evento">
+                        <img src="./IMG/carrossel.jpg">
+                        <div class="texto-evento">
+                            <h3>Baile de Jazz - Uma Noite de Ritmo e Elegância</h3>
+                            <p class="data">24 de Novembro de 2025</p>
+                            <p>Prepare-se para uma experiência que vai transportar você para a era dourada do jazz.
+                                O Baile de Jazz é uma celebração da música, da dança e do charme atemporal das grandes
+                                noites dos anos 40 e 50.</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="card-evento">
+                        <img src="./IMG/carrossel 02.jpg">
+                        <div class="texto-evento">
+                            <h3>Aula Especial com Convidado</h3>
+                            <p class="data">03 de Dezembro de 2025</p>
+                            <p>Uma atividade preparada para ampliar horizontes, inspirar ideias e oferecer uma
+                                experiência enriquecedora.
+                                Um profissional convidado compartilhará vivências, técnicas e perspectivas
+                                exclusivas sobre o tema.</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="card-evento">
+                        <img src="./IMG/carrossel 03.jpg">
+                        <div class="texto-evento">
+                            <h3>Apresentação dos Alunos</h3>
+                            <p class="data">10 de Dezembro de 2025</p>
+                            <p>Uma atividade preparada para celebrar o desenvolvimento dos participantes, valorizando
+                                suas conquistas e evolução ao longo do período.
+                                Será um momento especial para compartilhar talentos, vivências e resultados, em um
+                                ambiente acolhedor e inspirador.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+
+        <!-- </section> -->
+
+        <section id="entreEmcontato">
+            <h2 class="titulo"><span>ENTRE EM CONTATO</span></h2>
+
+            <div class="contato-container">
+
+                <div class="formulario">
+                    <label>QUAL É O SEU NOME?</label>
+                    <input type="text" placeholder="Digite seu nome...">
+
+                    <label>EM QUAL E-MAIL PODEMOS TE RESPONDER?</label>
+                    <input type="email" placeholder="Digite seu e-mail...">
+
+                    <label>COMO PODEMOS TE AJUDAR?</label>
+                    <textarea placeholder="Informe sua dúvida..."></textarea>
+                </div>
+
+                <div class="mapa">
+                    <img src="./IMG/mapa.jpg" alt="Mapa">
+                </div>
+            </div>
+
+            <button class="btn-enviar">ENVIAR</button>
+        </section>
+
+        <footer>
+            <div class="espacoLateral">
+
+                <img src="./IMG/logo white.svg" alt="logo da ENTRE TONS">
+
+
+
+                <div>
+
+                    <p>Estamos também nas redes sociais</p>
+
+                    <div id="icone-redes">
+
+                        <!-- INSTAGRAM -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                        </svg>
+
+                        <!-- TIK TOK -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-tiktok" viewBox="0 0 16 16">
+                            <path
+                                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                        </svg>
+
+                        <!-- FACEBOOK -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+            <p id="direitos-reservados">© 2025 ENTRE TONS™. Todos os direitos reservados™</p>
+
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

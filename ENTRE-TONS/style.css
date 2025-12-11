@@ -1,0 +1,773 @@
+@font-face {
+    font-family: "zuume-cut-regular";
+    src: url("./FONT/zuume-cut-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vermelho: #DB222A;
+    --marsala: #A31621;
+    --preto: #000;
+    --cinza: #798086;
+    --branco: #F5F5F5;
+
+}
+
+.espacoLateral {
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* -------- Menu ------- */
+header {
+    height: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 195px;
+}
+
+.menu {
+    max-width: 700px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    font-size: 25px;
+    color: var(--preto);
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    font-family: "zuume-cut-regular";
+}
+
+.menu a:hover {
+    color: var(--marsala);
+}
+
+/* -------- Menu Hamburguer ------- */
+#iconeBarras,
+#iconeX,
+#menuBotao {
+    display: none;
+}
+
+
+
+
+/* ---------- Reponsividade ---------------- */
+@media screen and (max-width: 768px) {
+    #sombra {
+        background-color: var(--cinza);
+        backdrop-filter: blur(45px);
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        right: -101vw;
+        transition: .5s;
+    }
+
+    #menuBotao {
+        display: block;
+        z-index: 1;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+
+        background: none;
+        border: none;
+
+        display: unset;
+        cursor: pointer;
+    }
+
+    /* Cor do menu de hamburguer */
+
+    header svg {
+        fill: var(--preto);
+    }
+
+    #iconeBarras {
+        display: block;
+    }
+
+    nav.menu {
+        width: 200px;
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+
+        position: fixed;
+        top: 165px;
+        right: -210px;
+        z-index: 1;
+        transition: .5s;
+    }
+
+    .menu a {
+        color: var(--preto);
+    }
+}
+
+.banner {
+    background-image: url("./IMG/Banner.jpg");
+    height: 75vh;
+    background-size: cover;
+    background-position: center -50px;
+    /* FOCO EXATO DO PROTÓTIPO */
+    background-repeat: no-repeat;
+}
+
+.icones {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 200px;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon svg {
+    color: var(--preto);
+    width: 60px;
+    transition: 0.5s;
+}
+
+
+.icon svg:hover {
+    transform: translateY(-15px);
+}
+
+.icon p {
+    font-family: "zuume-cut-regular";
+    line-height: 25px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#nossaHistoria {
+    font-family: "zuume-cut-regular";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+#nossaHistoria p {
+    display: flex;
+    font-size: 32px;
+    position: relative;
+    bottom: 200px;
+}
+
+#nossaHistoria h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 270px;
+
+
+}
+
+.texto {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.descricao {
+    width: 48%;
+    max-width: 600px;
+
+    margin-bottom: 100px;
+}
+
+.img_h {
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
+    max-width: 900px;
+}
+
+.img01_h {
+    width: 48%;
+}
+
+.img01_h img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img02_h {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px 20px;
+}
+
+.img02_h img {
+    width: 100%;
+    border-radius: 20px;
+    /* box-shadow: 9 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.titulo {
+
+    justify-content: center;
+    font-family: "zuume-cut-regular";
+    font-size: 37px;
+}
+
+.descricao p {
+    margin-left: 100px;
+}
+
+.img_h {
+    margin-right: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.descricao h2 {
+    text-decoration-line: var(--vermelho);
+}
+
+.titulo span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    /* espaço entre o texto e a linha */
+}
+
+.titulo span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 173px;
+    /* tamanho da linha */
+    height: 3px;
+    /* espessura */
+    background-color: var(--marsala);
+    /* cor da linha */
+    border-radius: 2px;
+}
+
+.titulo span {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    /* espaço entre o texto e a linha */
+}
+
+.titulo span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* tamanho da linha */
+    height: 2px;
+    /* espessura */
+    background-color: var(--marsala);
+    /* cor da linha */
+    border-radius: 2px;
+}
+
+
+.titulo h2 {
+    margin-left: 200px;
+}
+
+
+.servicos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.card {
+    width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+    margin-top: 20px;
+    font-family: "zuume-cut-regular";
+    font-size: 20px;
+}
+
+.titulo {
+    display: flex;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 90px;
+}
+
+/* ------------------------------CARROSSEL----------------------- */
+
+.carrossel-eventos {
+    text-align: center;
+    margin-top: 50px;
+    font-family: "zuume-cut-regular";
+}
+
+.titulo {
+    font-family: "zuume-cut-regular";
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.carousel-container {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card-evento {
+    min-width: 100%;
+    background: #E2E2E2;
+    padding: 40px;
+    border-radius: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-evento img {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.texto-evento {
+    max-width: 500px;
+    text-align: left;
+}
+
+.texto-evento .data {
+    color: #B21818;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carousel-dots {
+    margin-top: 20px;
+}
+
+.carousel-dots .dot {
+    height: 15px;
+    width: 15px;
+    background: #B21818;
+    opacity: 0.4;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-dots .dot.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+
+/* -------------------------------FORMULARIO------------------------ */
+#entreEmcontato {
+    font-family: "zuume-cut-regular";
+    margin-top: 300px;
+}
+
+
+/* Container das duas colunas */
+.contato-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    /* espaço entre formulário e mapa */
+}
+
+/* LADO ESQUERDO — Formulário */
+.formulario {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    background: #f3f3f3;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    font-family: "zuume-cut-regular";
+}
+
+.formulario textarea {
+    height: 160px;
+    resize: none;
+}
+
+.mapa img {
+    margin-top: 40px;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão */
+.btn-enviar {
+    display: block;
+    margin: 40px auto 0 auto;
+    padding: 18px 60px;
+    background: var(--marsala);
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: "zuume-cut-regular";
+    cursor: pointer;
+}
+
+/* ---------------FOOTER-------------------------- */
+footer {
+    margin-top: 80px;
+    height: 235px;
+    background-color: var(--marsala);
+    font-family: "zuume-cut-regular";
+}
+
+footer p,
+footer svg {
+    color: var(--branco);
+    font-size: 22px;
+}
+
+footer img {
+    margin-left: 97px;
+    width: 200px;
+    height: 90px;
+}
+
+footer div.espacoLateral {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 55px;
+}
+
+footer svg {
+    color: var(--branco);
+    height: 40px;
+    width: 40px;
+}
+
+#icone-redes {
+    padding-top: 50px;
+    display: flex;
+    gap: 50px;
+    justify-content: end;
+}
+
+
+#direitos-reservados {
+    padding-top: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------------------------RESPONSIVIDADE----------------------------- */
+
+/* ============================================================
+   RESPONSIVIDADE COMPLETA – MOBILE (ATÉ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+
+    /* Ajuste geral */
+    .espacoLateral {
+        width: 90vw;
+    }
+
+    /* Menu */
+    header {
+        height: 120px;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    /* Banner */
+    .banner {
+        height: 40vh;
+        background-position: center;
+    }
+
+    /* Ícones */
+    .icones {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 60px;
+        margin-bottom: 120px;
+    }
+
+    .icon svg {
+        width: 80px;
+    }
+
+    /* Seção Nossa História */
+    #nossaHistoria {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    #nossaHistoria h2 {
+        margin-bottom: 40px !important;
+    }
+
+    #nossaHistoria p {
+        position: static;
+        font-size: 20px;
+        bottom: 0;
+        margin: 0;
+    }
+
+    .descricao {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .descricao p {
+        margin-left: 0;
+    }
+
+    .img_h {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        margin: 0;
+    }
+
+    .img02_h {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .img01_h,
+    .img02_h {
+        width: 100%;
+    }
+
+    /* Cards de Serviços */
+    .servicos {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Carrossel */
+    .carousel-container {
+        width: 90%;
+    }
+
+    .card-evento {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .card-evento img {
+        width: 90%;
+        height: auto;
+    }
+
+    .texto-evento {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Contato */
+    .contato-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .mapa img {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    /* Footer */
+    footer {
+        height: auto;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    footer div.espacoLateral {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer img {
+        margin-left: 0;
+    }
+
+    #icone-redes {
+        justify-content: center;
+    }
+}
+
+/* ============================================================
+   RESPONSIVIDADE – TABLET (481px → 900px)
+   ============================================================ */
+@media (min-width: 481px) and (max-width: 900px) {
+
+    .espacoLateral {
+        width: 90vw;
+    }
+
+    /* Banner */
+    .banner {
+        height: 55vh;
+        background-position: center;
+    }
+
+    /* Ícones */
+    .icones {
+        gap: 60px;
+    }
+
+    .icon svg {
+        width: 80px;
+    }
+
+    /* Nossa História */
+    #nossaHistoria {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .descricao,
+    .img_h {
+        width: 90%;
+        max-width: 700px;
+    }
+
+    .descricao p {
+        margin-left: 0;
+    }
+
+    .img_h {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Serviços */
+    .servicos {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    /* Carrossel */
+    .carousel-container {
+        width: 70%;
+    }
+
+    .card-evento img {
+        width: 280px;
+        height: 220px;
+    }
+
+    /* Contato */
+    .contato-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario {
+        width: 80%;
+    }
+
+    .mapa img {
+        width: 60%;
+        height: auto;
+    }
+
+    /* Footer */
+    footer div.espacoLateral {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
